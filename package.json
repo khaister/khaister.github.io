@@ -13,6 +13,6 @@
     "postinstall": "submodules-install"
   },
   "submodules": [
-    "themes/salinger/*"
+    "themes/**"
   ]
 }
