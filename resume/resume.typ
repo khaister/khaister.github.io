@@ -1,7 +1,7 @@
-#let contact_sep() = {text(gray)[$space.hair$|$space.hair$]}
+#let separator() = {text(gray)[$space.hair$|$space.hair$]}
 
-#let role(role_title, org_url, start, end) = {
-  [*#role_title*]
+#let role(title: none, org_url: none, start: none, end: none) = {
+  [*#title*]
   text(gray, style: "italic")[ at ]
   link("https://" + org_url)[#org_url]
   text(gray, style: "italic")[ from ]
@@ -43,11 +43,11 @@
     #v(-10pt)
   
     #contact.location
-    #contact_sep()
+    #separator()
     #contact.phone
-    #contact_sep()
-    #link(contact.email_link)[#contact.email_display]
-    #contact_sep()
+    #separator()
+    #link(contact.email)
+    #separator()
     #link(contact.website_link)[#contact.website_display]
 
     #v(10pt)
