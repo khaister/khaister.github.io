@@ -3,7 +3,7 @@ import Link from "next/link"
 export default async function Blog() {
   const posts = await getPosts();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex flex-col items-center justify-between p-24">
       <h1>Posts</h1>
       <div>
         {posts.map((post:any) => {
