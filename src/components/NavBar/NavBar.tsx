@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -20,7 +19,7 @@ export const NavBar = () => {
   return (
     <Navbar fluid>
       <NavbarBrand as={Link} href="/">
-        <Image
+        <img
           src="/icons8-laptop-cute-color-96.png"
           width="32"
           height="16"
