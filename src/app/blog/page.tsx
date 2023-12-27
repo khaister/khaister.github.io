@@ -20,7 +20,7 @@ export default async function Blog() {
   )
 }
 
-export async function getPosts(): Promise<any> {
+async function getPosts(): Promise<any> {
   const promise = new Promise((resolve, reject) => {
     resolve([
       {
