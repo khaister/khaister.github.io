@@ -4,8 +4,8 @@
   me: "Khai Nguyen",
   contact: (
     location: "Los Angeles, California",
-    phone: [+1$space.hair$(714)$space.hair$248$space.hair$5424],
-    email: "mailto:khai.nguyen@outlook.com",
+    phone: [+1$space.hair$(714)$space.hair$248-5424],
+    email: "mailto:khaiatwork@gmail.com",
     website_link: "https://github.com/khaister",
     website_display: "github.com/khaister",
   ),
@@ -15,16 +15,16 @@
 
 == Senior Software Engineer
 
-Senior Software Engineer with more than 8 years in full-stack software development experience; strengths in working collaboratively with technical and business teams to produce high quality software products from design to launch.
+Senior Software Development Engineer with more than 8 years in full-stack software development experience in FinTech, Real Estate, Healthcare industries; strengths in working collaboratively with technical and business teams to produce high quality software products from design to launch.
 
 
 == Skills
 
 - *Languages* Python, TypeScript/JavaScript, C\#
 - *Frameworks* Django, .NET Core, WPF, React, Vue, Angular
-- *Databases* PostgreSQL, SQL Server, MySQL
+- *Databases* PostgreSQL, SQL Server, MySQL, MongoDB
 - *Cloud* AWS (ECS, EKS, Lambda, SNS, SQS, DynamoDB, Aurora, S3, ElastiCache for Redis)
-- *DevOps* macOS, Linux, CI/CD, Git, GitHub Actions, Docker, Bash, Agile
+- *Others* macOS, Linux, CI/CD, Git, GitHub Actions, Docker/Kubernetes/Helm Chart, Terraform
 
 
 == Experience
@@ -40,8 +40,7 @@ Senior Software Engineer with more than 8 years in full-stack software developme
 #role(title: "Senior Software Engineer", org_url: "apartments.com", start: "Aug 2019", end: "Mar 2022")
 
 - Designed and implement Messaging system using RESTful Web API and background service components, deployed to AWS-hosted VPC
-- Built a web service from scratch to support Online Tour Scheduling functionalities for multi-family communities
-- On-boarded new team members onto various projects within Apartments.com codebase
+- Built a web service from scratch to support Tour Scheduling functionalities for apartment communities
 - Mentored associate developers on software engineering in general, business domain knowledge, and development process
 - Led technical interviews during hiring process to evaluate potential candidates for team
 - Led/collaborated with team members at all experience levels and coordinated with stakeholders to unblock process and ensure features were delivered as specified and in a timely manner
@@ -49,19 +48,19 @@ Senior Software Engineer with more than 8 years in full-stack software developme
 
 #role(title: "Software Development Engineer", org_url: "quickbridge.com", start: "Oct 2018", end: "Jul 2019")
 
-- Migrate existing SMS system from Cisco to Twilio
-- Built & maintained web services using the latest ASP.NET Framework for sending SMS messages via Twilio API within a 3-month turnaround time
-- Designed & implemented the SMS UI/UX using Angular 4 for internal CRM web application
+- Built & launched from scratch within 3 months a SMS solution for internal CRM web app using Angular 4, allowing two-way communications between loan processing agents and applicants
+- Built & maintained ASP.NET Core Web API for sending SMS messages via Twilio API
+- Led effort of migrating codebases from .NET Framework to .NET Core, trained team members on N-Tier application design pattern and ASP.NET Core features
 
 
 #role(title: "Software Engineer", org_url: "cudirect.com", start: "Jun 2015", end: "Sep 2018")
 
-- Implemented features for a WPF application, along with the backend Web API, for loan & account management purposes
-- Oversaw version control system migration from TFVC to Git repositories, including training ~20 team members & promoting best practices, effectively increased development velocity and collaboration across 5 teams
-- Led release deployment effort by coordinating teams to finalize software components for production release
+- Implemented features of various complexities for a loan originating platform using WPF, ASP.NET, and SQL Server
+- Built microservices using NServiceBus stack to provide efficient publisher-consumer messaging between loan originating system and car loan application platform
+- Led the migration effort from TFVC to Git for entire codebase, including training ~20 team members & promoting best practices, effectively increased development velocity and ease of collaboration
 
 
 == Education
 
-*B.Sc.* _cum laude_ in *Biochemistry* with *Computer Science*  #h(1fr) #text(gray)[] \
+*B.Sc.* _cum laude_ in *Biochemistry* with *Computer Science* \
 California State University, Long Beach (2015)
