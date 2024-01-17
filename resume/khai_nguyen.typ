@@ -31,10 +31,10 @@ Senior Software Development Engineer with more than 8 years in full-stack softwa
 
 #role(title: "Senior Software Engineer", org_url: "blinkhealth.com", start: "Mar 2022", end: "Present")
 
-- Build the core Web API backend service for managing prescriptions
-- Integrate a Django RESTful web API into the proprietary pharmacy software for insurance eligibility and claim purposes
-- Build software on top of an automation workflow engine (Camunda Platform) to integrate with external provider for drug prescription data flow according to business requirements
-- New Relic
+- Building internal web API for managing patient's prescriptions
+- Enhance django backend for insurance claim submission on patient's behalf, interfacing with various third-party vendors
+- Perform quarterly on-call duties to ensure core services up and running with minimal downtime
+- Design workflow automation models to allow for automatic retrying of failed insurance claim submission
 
 
 #role(title: "Senior Software Engineer", org_url: "apartments.com", start: "Aug 2019", end: "Mar 2022")
