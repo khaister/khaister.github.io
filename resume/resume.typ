@@ -17,7 +17,7 @@
     margin: (x: 1.1cm, y: 1.3cm),
   )
   #set par(justify: true)
-  #set text(fill: rgb("#222222"), hyphenate: true)
+  #set text(size: 10pt, fill: rgb("#222222"), hyphenate: true)
   
   // style headings
   #show heading: it => [
