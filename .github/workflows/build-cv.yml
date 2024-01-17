@@ -1,4 +1,4 @@
-name: Résumé: Build
+name: Résumé > Build
 on: [push, workflow_dispatch]
 
 permissions:
