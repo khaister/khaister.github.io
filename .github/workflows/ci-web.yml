@@ -1,4 +1,4 @@
-name: Web > Build
+name: Build Web
 
 on:
   # Runs on PR creation & push
