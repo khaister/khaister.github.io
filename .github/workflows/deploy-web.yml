@@ -27,7 +27,7 @@ defaults:
     shell: bash
 
 jobs:
-  build-web:
+  deploy-web:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
