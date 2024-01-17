@@ -1,4 +1,4 @@
-name: Web > Build
+name: Build Web
 
 on:
   # Runs on PR creation & push
@@ -26,7 +26,7 @@ defaults:
     shell: bash
 
 jobs:
-  ci-web:
+  build-web:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -1,0 +1,24 @@
+name: Build Résumé
+
+on:
+  # Runs on PR creation & push
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Typst
+        uses: lvignoli/typst-action@main
+        with:
+          source_file: resume/khai_nguyen.typ

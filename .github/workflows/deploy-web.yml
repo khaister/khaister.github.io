@@ -1,4 +1,4 @@
-name: Web > Build & Deploy
+name: Deploy Web
 
 on:
   # Runs on pushes targeting the default branch
@@ -27,7 +27,7 @@ defaults:
     shell: bash
 
 jobs:
-  build-web:
+  deploy-web:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
