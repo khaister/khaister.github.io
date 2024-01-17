@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: Web: Build & Deploy
 
 on:
   # Runs on pushes targeting the default branch

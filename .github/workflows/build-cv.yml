@@ -1,0 +1,25 @@
+name: Résumé: Build
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Typst
+        uses: lvignoli/typst-action@main
+        with:
+          source_file: resume/khai_nguyen.typ
+
+      - name: Commit
+        run: |
+          git config --global user.name 'Khai Nguyen'
+          git config --global user.email '1192669+khaister@users.noreply.github.com'
+          git add resume/khai_nguyen.pdf
+          git commit -m "Update khai_nguyen.pdf"
+          git push
