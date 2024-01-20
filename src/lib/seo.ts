@@ -31,7 +31,6 @@ type BlogPostOgMeta = {
   type: "article";
   url?: string; // blog post url
   author?: string; // post author name
-  // siteName?: string; // page title
   publishDate: string; // ISO string
   image?: string; // preview image
   imageAlt?: string; // alt text for preview image
@@ -77,8 +76,6 @@ export function getPageMeta({
     ogImageAltText = !ogImageAltText
       ? `Preview image for ${pageTitle}`
       : ogImageAltText;
-    // ogImageWidth = !ogImageWidth ? 1200 : ogImageWidth;
-    // ogImageHeight = !ogImageHeight ? 627 : ogImageHeight;
   }
 
   const meta: PageMeta = { title: pageTitle, description: description };
