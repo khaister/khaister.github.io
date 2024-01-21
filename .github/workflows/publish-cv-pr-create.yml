@@ -24,6 +24,7 @@ jobs:
         with:
           source_file: resume/khai_nguyen.typ
   push:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Import GPG key
