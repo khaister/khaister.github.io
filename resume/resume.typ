@@ -1,5 +1,3 @@
-// test
-
 #let separator() = {text(gray)[$space.hair$|$space.hair$]}
 
 #let role(title: none, org_url: none, start: none, end: none) = {
