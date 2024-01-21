@@ -4,7 +4,8 @@ on:
   # Runs on PR creation & push
   pull_request:
     types: [opened, reopened, synchronize]
-    paths: ["resume"]
+    paths: [resume]
+    branches-ignore: [automation/update-cv]
 
 jobs:
   build-cv:
