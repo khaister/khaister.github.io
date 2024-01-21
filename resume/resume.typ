@@ -1,3 +1,5 @@
+// test
+
 #let separator() = {text(gray)[$space.hair$|$space.hair$]}
 
 #let role(title: none, org_url: none, start: none, end: none) = {
@@ -18,12 +20,12 @@
   )
   #set par(justify: true)
   #set text(size: 10pt, fill: rgb("#222222"), hyphenate: true)
-  
+
   // style headings
   #show heading: it => [
     #set text(weight: "light", tracking: 1em/23)
     #upper(it)
-    
+
     #if it.level == 2 [
       #v(-10pt)
       #line(length: 100%, stroke: silver)
@@ -41,7 +43,7 @@
   // contact info
   #[
     #v(-10pt)
-  
+
     #contact.location
     #separator()
     #contact.phone
