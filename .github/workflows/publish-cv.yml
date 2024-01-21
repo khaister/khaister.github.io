@@ -3,11 +3,8 @@ name: Publish Résumé - Create Pull Request
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: [main, publish-cv]
+    branches: [main]
     paths: [resume]
-  # todo: remove pr
-  pull_request:
-    types: [opened, reopened, synchronize]
 
   # Allows running workflow on demand
   workflow_dispatch:
@@ -17,7 +14,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  create-pr:
+  publish:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,9 +50,8 @@ jobs:
 
       - name: Create pull request
         run: |
-          gh pr create --base publish-cv --title "🤖 Update Resume" --body ""
-          echo "PR_NUMBER=$(gh pr view automation/update-cv --json number | jq .number)" >> $GITHUB_ENV
+          gh pr create --title "🤖 Update Resume" --body ""
 
       - name: Merge pull request
         run: |
-          gh pr merge --squash $PR_NUMBER
+          gh pr merge --squash automation/update-cv
