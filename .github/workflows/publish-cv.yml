@@ -3,8 +3,8 @@ name: Publish Résumé - Create Pull Request
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: [main]
-    paths: [resume]
+    branches: [main, publish-cv]
+    paths: [resume/khai_nguyen.typ]
 
   # Allows running workflow on demand
   workflow_dispatch:
@@ -50,7 +50,7 @@ jobs:
 
       - name: Create pull request
         run: |
-          gh pr create --title "🤖 Update Resume" --body ""
+          gh pr create --base publish-cv --title "🤖 Update Resume" --body ""
 
       - name: Merge pull request
         run: |
