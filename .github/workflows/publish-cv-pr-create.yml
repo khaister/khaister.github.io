@@ -1,10 +1,13 @@
-name: Publish Résumé
+name: Publish Résumé - Create Pull Request
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: [main]
-    paths: ["resume"]
+    branches: [main, publish-cv]
+    paths: [resume]
+
+  workflow_dispatch:
+
 
 permissions:
   contents: write
@@ -33,13 +36,14 @@ jobs:
 
       - name: Commit
         run: |
-          git checkout -b automation---update-resume
+          git checkout -b automation/update-cv
           git config --global user.name 'Khai Nguyen'
           git config --global user.email '1192669+khaister@users.noreply.github.com'
           git add resume/khai_nguyen.pdf
           git commit -S -m "🤖 Update khai_nguyen.pdf"
           git push -u origin HEAD
-      
+
       - name: Create pull request
         run: |
-          gh pr create --base main --title "🤖 Update Resume"
+          gh pr create --base publish-cv --title "🤖 Update Resume"
+          # echo "PR_NUMBER=$(gh pr view --json number | jq .number)" >> $GUTHUB_ENV
