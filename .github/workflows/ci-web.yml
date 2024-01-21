@@ -2,6 +2,7 @@ name: Build Web
 
 on:
   # Runs on PR creation & push
+  # and ignore PR opened on the automation/update-cv branch
   pull_request:
     types: [opened, reopened, synchronize]
     branches-ignore: [automation/update-cv, publish-cv]
