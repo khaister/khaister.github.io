@@ -51,7 +51,7 @@ jobs:
 
       - name: Create pull request
         run: |
-          gh pr create --base publish-cv --title "🤖 Update Resume" --body ""
+          gh pr create --title "🤖 Update Resume" --body ""
 
       - name: Merge pull request
         run: |
