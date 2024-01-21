@@ -2,8 +2,9 @@ name: Publish Résumé - Create Pull Request
 
 on:
   # Runs on pushes targeting the default branch
+  # and only when there are changes to any *.typ files
   push:
-    branches: [main, publish-cv]
+    branches: [main]
     paths: [resume/*.typ]
 
   # Allows running workflow on demand
