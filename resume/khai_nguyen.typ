@@ -35,6 +35,7 @@ Senior Software Development Engineer with more than 8 years in full-stack softwa
 - Enhance django backend for insurance claim submission on patient's behalf, interfacing with various third-party vendors
 - Perform quarterly on-call duties to ensure core services up and running with minimal downtime
 - Design workflow automation models to allow for automatic retrying of failed insurance claim submission
+- Participate in on-call rotations and build logging and metrics (New Relic) to ensure minimize down time for core services and disruptions to pharmacy operations
 
 
 #role(title: "Senior Software Engineer", org_url: "apartments.com", start: "Aug 2019", end: "Mar 2022")
