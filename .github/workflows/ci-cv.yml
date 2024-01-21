@@ -1,10 +1,12 @@
 name: Build Résumé
 
 on:
-  # Runs on PR creation & push
+  # Runs on PR creation & push with changes in ./resume folder
+  # and ignore PR opened on the automation/update-cv branch
   pull_request:
     types: [opened, reopened, synchronize]
-    paths: ["resume"]
+    branches-ignore: [automation/update-cv]
+    paths: [resume]
 
 jobs:
   build-cv:
