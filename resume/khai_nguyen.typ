@@ -6,8 +6,8 @@
     location: "Los Angeles, California",
     phone: [+1$space.hair$(714)$space.hair$248-5424],
     email: "mailto:khaiatwork@gmail.com",
-    website_link: "https://github.com/khaister",
-    website_display: "github.com/khaister",
+    website_link: "https://khaister.github.io",
+    website_display: "khaister.github.io",
   ),
   doc,
 )
