@@ -3,7 +3,7 @@ name: Publish Résumé - Merge Pull Request
 on:
   # Runs on pushes targeting the resume automation branch
   push:
-    branches: [automation---update-cv]
+    branches: [automation/update-cv]
     # paths: ["resume"]
 
   workflow_dispatch:
@@ -18,4 +18,4 @@ jobs:
       - name: Merge pull request
         run: |
           gh pr merge --squash
-          # echo "PR_NUMBER=$(gh pr view --json number | jq .number)" >> $GUTHUB_ENV
+          # echo "PR_NUMBER=$(gh pr view --json number | jq .number)" >> $GITHUB_ENV
