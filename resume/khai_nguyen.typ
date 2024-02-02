@@ -1,10 +1,12 @@
+#set document(keywords: "main", title: "Khai Nguyen", author: "Khai Nguyen", date: auto)
+
 #import "resume.typ": resume, role
 
 #show: doc => resume(
   me: "Khai Nguyen",
   contact: (
-    location: "Los Angeles, California",
-    phone: [+1$space.hair$(714)$space.hair$248-5424],
+    location: "Irvine, California",
+    phone: [(714)$space.hair$248-5424],
     email: "mailto:khaiatwork@gmail.com",
     website_link: "https://khaister.github.io",
     website_display: "khaister.github.io",
@@ -15,13 +17,13 @@
 
 == Senior Software Engineer
 
-Senior Software Development Engineer with more than 8 years in full-stack software development experience in FinTech, Real Estate, Healthcare industries; strengths in working collaboratively with technical and business teams to produce high quality software products from design to launch.
+Senior Software Development Engineer with more than 8 years of full-stack software development experience in FinTech, real estate, and healthcare industries. Skilled with working collaboratively with technical and business teams to produce high quality software products from design to launch.
 
 
 == Skills
 
 - *Languages* Python, TypeScript/JavaScript, C\#
-- *Frameworks* Django, .NET Core, WPF, React, Vue, Angular
+- *Frameworks* Django, React, Vue, Angular, .NET Core, WPF
 - *Databases* PostgreSQL, SQL Server, MySQL, MongoDB
 - *Cloud* AWS (ECS, EKS, Lambda, SNS, SQS, DynamoDB, Aurora, S3, ElastiCache for Redis)
 - *Others* macOS, Linux, CI/CD, Git, GitHub Actions, Docker/Kubernetes/Helm Chart, Terraform
@@ -29,39 +31,38 @@ Senior Software Development Engineer with more than 8 years in full-stack softwa
 
 == Experience
 
-#role(title: "Senior Software Engineer", org_url: "blinkhealth.com", start: "Mar 2022", end: "Present")
+#role(title: "Senior Software Engineer", org_url: "blinkhealth.com", start: "March 2022", end: "Present")
 
-- Building internal web API for managing patient's prescriptions
-- Enhance django backend for insurance claim submission on patient's behalf, interfacing with various third-party vendors
-- Perform quarterly on-call duties to ensure core services up and running with minimal downtime
-- Design workflow automation models to allow for automatic retrying of failed insurance claim submission
-- Participate in on-call rotations and build logging and metrics (New Relic) to ensure minimize down time for core services and disruptions to pharmacy operations
+- Design and implement RESTful API for managing patient prescriptions using Django (with Django REST Framework), PostgreSQL, Redis, while working with consultants to ensure compliance with state and federal regulation
+- Increase development team productivity and collaboration by bootstrapping GitHub repo, AWS infrastructure (Kubernetes, SQS, RDS, S3), secrets management (Hashicorp Vault), CI/CD pipeline (GitHub Actions)
+- Integrate with various third-party vendor APIs for insurance eligibility check and claim submission, including supports for async response via webhooks
+- Add new and enhance existing features for ReactJS web portal used by pharmacy team members, supporting various daily tasks such as patient insurance management, prescription management, and medication dispensing
+- Participate in on-call rotations and build logs/metrics/alerts (New Relic) to ensure minimal downtime for core backend services
 
 
-#role(title: "Senior Software Engineer", org_url: "apartments.com", start: "Aug 2019", end: "Mar 2022")
+#role(title: "Senior Software Engineer", org_url: "apartments.com", start: "August 2019", end: "March 2022")
 
-- Designed and implement Messaging system using RESTful Web API and background service components, deployed to AWS-hosted VPC
-- Built a web service from scratch to support Tour Scheduling functionalities for apartment communities
+- Designed and implemented Messaging system using RESTful Web API and background service components deployed to AWS-hosted VPC
+- Developed web service which integrated with third-party APIs to support online tour scheduling functionalities for apartment communities
 - Mentored associate developers on software engineering in general, business domain knowledge, and development process
-- Led technical interviews during hiring process to evaluate potential candidates for team
-- Led/collaborated with team members at all experience levels and coordinated with stakeholders to unblock process and ensure features were delivered as specified and in a timely manner
+- Conducted technical interviews during hiring process to evaluate potential candidates for team
 
 
-#role(title: "Software Development Engineer", org_url: "quickbridge.com", start: "Oct 2018", end: "Jul 2019")
+#role(title: "Software Development Engineer", org_url: "quickbridge.com", start: "October 2018", end: "July 2019")
 
-- Built & launched from scratch within 3 months a SMS solution for internal CRM web app using Angular 4, allowing two-way communications between loan processing agents and applicants
-- Built & maintained ASP.NET Core Web API for sending SMS messages via Twilio API
-- Led effort of migrating codebases from .NET Framework to .NET Core, trained team members on N-Tier application design pattern and ASP.NET Core features
+- Developed and deployed an SMS solution (integrating with #link("https://www.twilio.com/en-us/messaging/channels/sms")[Twilio's SMS API]) for internal CRM web application within a three-month time frame, utilizing AngularJS, ASP.NET Core, and MS SQL Server, facilitating bidirectional communication between loan processing agents and clients
+- Led effort to migrate codebase from .NET Framework to .NET Core to allow for hosting on Linux-based containers, resulting in reduction in infrastructure cost and increase in development velocity
+- Trained team members on web API application design recommended practices and ASP.NET Core features
 
 
 #role(title: "Software Engineer", org_url: "cudirect.com", start: "Jun 2015", end: "Sep 2018")
 
 - Implemented features of various complexities for a loan originating platform using WPF, ASP.NET, and SQL Server
-- Built microservices using NServiceBus stack to provide efficient publisher-consumer messaging between loan originating system and car loan application platform
-- Led the migration effort from TFVC to Git for entire codebase, including training ~20 team members & promoting best practices, effectively increased development velocity and ease of collaboration
+- Built microservices using NServiceBus stack to provide efficient publisher-consumer messaging between loan originating system and car dealership platform
+- Planned and executed version control system conversion from TFVC to Git, trained developers across 4-5 teams on version control best practices, effectively increased development velocity and ease of collaboration
 
 
 == Education
 
 *B.Sc.* _cum laude_ in *Biochemistry* with *Computer Science* \
-California State University, Long Beach (2015)
+California State University, Long Beach
