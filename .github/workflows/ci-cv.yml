@@ -6,7 +6,7 @@ on:
   pull_request:
     types: [opened, reopened, synchronize]
     branches-ignore: [automation/update-cv]
-    paths: [resume]
+    paths: ["curriculum-vitae"]
 
 jobs:
   build-cv:
@@ -18,4 +18,5 @@ jobs:
       - name: Typst
         uses: lvignoli/typst-action@main
         with:
-          source_file: resume/khai_nguyen.typ
+          source_file: curriculum-vitae/resume.typ
+          options: curriculum-vitae/khai_nguyen.pdf
