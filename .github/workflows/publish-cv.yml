@@ -44,6 +44,7 @@ jobs:
 
       - name: Commit & Push
         run: |
+          mv resume.pdf khai_nguyen.pdf
           git status
           git add .
           git commit -S -m "🤖 Update khai_nguyen.pdf"
