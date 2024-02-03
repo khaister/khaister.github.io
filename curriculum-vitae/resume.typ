@@ -146,8 +146,8 @@
 #{
   let content = json("content.json")
   show_me(content.me)
-  show_summary(content.sections.summary)
-  show_skills(content.sections.skills)
-  show_experience(content.sections.experience)
-  show_education(content.sections.education)
+  show_summary(content.summary)
+  show_skills(content.skills)
+  show_experience(content.experience)
+  show_education(content.education)
 }
