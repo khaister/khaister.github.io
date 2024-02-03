@@ -1,2 +1,2 @@
-cv:
-	typst compile ./resume/khai_nguyen.typ
+resume:
+	typst compile ./curriculum-vitae/resume.typ ./curriculum-vitae/khai_nguyen.pdf
