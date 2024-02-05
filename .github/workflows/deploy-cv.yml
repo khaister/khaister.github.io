@@ -34,6 +34,10 @@ jobs:
         with:
           source_file: ./curriculum-vitae/resume.typ
 
+      - name: Upload artifact
+        run: |
+          mv ./curriculum-vitae/resume.pdf ./public/khai_nguyen.pdf --force
+
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
         with:
@@ -44,7 +48,6 @@ jobs:
 
       - name: Commit & Push
         run: |
-          mv ./curriculum-vitae/resume.pdf ./public/khai_nguyen.pdf
           git status
           git add .
           git commit -S -m "🤖 Update khai_nguyen.pdf"

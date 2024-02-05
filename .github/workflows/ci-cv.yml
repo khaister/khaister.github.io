@@ -19,3 +19,7 @@ jobs:
         uses: lvignoli/typst-action@main
         with:
           source_file: curriculum-vitae/resume.typ
+
+      - name: Upload artifact
+        run: |
+          mv ./curriculum-vitae/resume.pdf ./public/khai_nguyen.pdf --force
