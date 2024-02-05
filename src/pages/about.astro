@@ -27,12 +27,21 @@ const education = cv.education;
 <PageLayout>
   <PageMeta title={`About | ${SITE_TITLE}`} slot="meta" />
   <section slot="main">
-    <div><i class="fa-solid fa-file-pdf text-gray-400"></i> <a href="khai_nguyen.pdf">View as PDF</a></div>
-    <div class="italic text-lg">
+    <a href="khai_nguyen.pdf">
+      <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+        <i class="fa-solid fa-file-pdf text-gray-400"></i>
+        <span class="no-underline text-sm">Download</span>
+      </button>
+    </a>
+
+    <div class="my-8 text-base">
       {summary.content}
     </div>
-    <div>
-      <h2 class="text-xl font-bold"><i class="fa-solid fa-hammer text-base text-gray-400"></i> {skills.name}</h2>
+    <div class="my-8">
+      <div class="text-center">
+        <i class="fa-solid fa-hammer text-base text-gray-400"></i>
+        <h2 class="text-xl font-bold">{skills.name}</h2>
+      </div>
       <ul>
         {
           skills.content.map((skill) => (
@@ -45,8 +54,13 @@ const education = cv.education;
         }
       </ul>
     </div>
-    <div>
-      <h2 class="text-xl font-bold"><i class="fa-solid fa-trophy text-base text-gray-400"></i> {experience.name}</h2>
+    <div class="my-8">
+      <div class="text-center">
+        <i class="fa-solid fa-trophy text-base text-gray-400"></i>
+        <h2 class="text-xl font-bold">
+          {experience.name}
+        </h2>
+      </div>
       {
         experience.roles.map((role) => {
           const start_month = MONTH_NAMES[role.start.month - 1];
@@ -81,9 +95,14 @@ const education = cv.education;
         })
       }
     </div>
-    <div>
-      <h2 class="text-xl font-bold"><i class="fa-solid fa-building-columns text-base text-gray-400"></i> {education.name}</h2>
-      <div>
+    <div class="my-8">
+      <div class="text-center">
+        <i class="fa-solid fa-building-columns text-base text-gray-400"></i>
+        <h2 class="text-xl font-bold">
+          {education.name}
+        </h2>
+      </div>
+      <div class="text-center">
         <strong>{education.degree}</strong>
         <em>{education.honor}</em> in <strong>{education.major}</strong> with <strong
           >{education.minor}</strong
