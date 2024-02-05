@@ -32,7 +32,7 @@ jobs:
       - name: Typst build
         uses: lvignoli/typst-action@main
         with:
-          source_file: curriculum-vitae/resume.typ
+          source_file: ./curriculum-vitae/resume.typ
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
@@ -44,7 +44,7 @@ jobs:
 
       - name: Commit & Push
         run: |
-          mv resume.pdf khai_nguyen.pdf
+          mv ./curriculum-vitae/resume.pdf ./public/khai_nguyen.pdf
           git status
           git add .
           git commit -S -m "🤖 Update khai_nguyen.pdf"
