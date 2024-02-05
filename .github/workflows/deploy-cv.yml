@@ -5,7 +5,7 @@ on:
   # and only when there are changes to any *.typ files
   push:
     branches: [main]
-    paths: [resume/*.typ]
+    paths: ["curriculum-vitae/*.typ", "curriculum-vitae/*.json"]
 
   # Allows running workflow on demand
   workflow_dispatch:
@@ -32,7 +32,11 @@ jobs:
       - name: Typst build
         uses: lvignoli/typst-action@main
         with:
-          source_file: resume/khai_nguyen.typ
+          source_file: ./curriculum-vitae/resume.typ
+
+      - name: Upload artifact
+        run: |
+          mv ./curriculum-vitae/resume.pdf ./public/khai_nguyen.pdf --force
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6

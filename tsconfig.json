@@ -2,7 +2,17 @@
   "extends": "astro/tsconfigs/strict",
   "display": "theme/bubblegum",
   "compilerOptions": {
-    "types": ["astro/client"],
-    "baseUrl": "."
+    "types": [
+      "astro/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "*"
+      ],
+      "cv/*": [
+        "./curriculum-vitae/*"
+      ]
+    }
   }
 }
