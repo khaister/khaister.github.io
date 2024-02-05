@@ -1,0 +1,95 @@
+---
+import cv from "@/curriculum-vitae/content.json";
+import PageMeta from "@/src/components/PageMeta.astro";
+import { SITE_TITLE } from "@/src/config";
+import PageLayout from "@/src/layouts/PageLayout.astro";
+
+const MONTH_NAMES = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
+];
+const summary = cv.summary;
+const skills = cv.skills;
+const experience = cv.experience;
+const education = cv.education;
+---
+
+<PageLayout>
+  <PageMeta title={`About | ${SITE_TITLE}`} slot="meta" />
+  <section slot="main">
+    <div><i class="fa-solid fa-file-pdf text-gray-400"></i> <a href="khai_nguyen.pdf">View as PDF</a></div>
+    <div class="italic text-lg">
+      {summary.content}
+    </div>
+    <div>
+      <h2 class="text-xl font-bold"><i class="fa-solid fa-hammer text-base text-gray-400"></i> {skills.name}</h2>
+      <ul>
+        {
+          skills.content.map((skill) => (
+            <li>
+              <span>
+                <strong>{skill.name}</strong> {skill.desc}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-xl font-bold"><i class="fa-solid fa-trophy text-base text-gray-400"></i> {experience.name}</h2>
+      {
+        experience.roles.map((role) => {
+          const start_month = MONTH_NAMES[role.start.month - 1];
+          let end_month = "present";
+          if (role.end?.month) {
+            end_month = MONTH_NAMES[role.end.month - 1];
+          }
+          return (
+            <>
+              <h3>
+                <span class="text-base font-bold">{role.title}</span>{" "}
+                <span class="italic text-gray-400">at</span>{" "}
+                <a href={`https://${role.org_url}`}>{role.org_url}</a>{" "}
+                <span class="italic text-gray-400">from</span>
+                <span class="capitalize">
+                  {start_month} {role.start.year}
+                </span>
+                <span class="italic text-gray-400">to</span>
+                <span class="capitalize">
+                  {end_month} {role.end?.year}
+                </span>
+              </h3>
+              <div>
+                <ul>
+                  {role.experience.map((exp) => (
+                    <li>{exp}</li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          );
+        })
+      }
+    </div>
+    <div>
+      <h2 class="text-xl font-bold"><i class="fa-solid fa-building-columns text-base text-gray-400"></i> {education.name}</h2>
+      <div>
+        <strong>{education.degree}</strong>
+        <em>{education.honor}</em> in <strong>{education.major}</strong> with <strong
+          >{education.minor}</strong
+        ><br />
+        <span>{education.institution}</span>
+      </div>
+    </div>
+  </section>
+</PageLayout>
