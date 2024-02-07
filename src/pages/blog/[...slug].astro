@@ -1,10 +1,7 @@
 ---
-import { getCollection } from "astro:content";
 import BlogPostMeta from "@/src/components/BlogPostMeta.astro";
 import ContentLayout from "@/src/layouts/ContentLayout.astro";
-import { defineMarkdocConfig, nodes, component } from "@astrojs/markdoc/config";
-import shiki from "@astrojs/markdoc/shiki";
-import TweetEmbed from "@/src/components/TweetEmbed.astro";
+import { getCollection } from "astro:content";
 
 import type { CollectionEntry } from "astro:content";
 interface Props {
@@ -30,8 +27,5 @@ const { Content } = await entry.render();
     publishDate={entry.data.date.toISOString()}
     slot="meta"
   />
-  <Content
-    frontmatter={{}}
-    slot="content"
-  />
+  <Content slot="content" />
 </ContentLayout>
