@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
+    "check": "astro check",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -10,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.4.1",
     "@astrojs/markdoc": "^0.8.3",
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.1.0",
