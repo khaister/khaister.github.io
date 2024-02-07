@@ -1,18 +1,18 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
-import { defineConfig } from "astro/config";
+import markdoc from "@astrojs/markdoc";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
 
-/* 
+/*
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
   In local development, your SEO meta tags will have localhost URL.
   In built production websites, your SEO meta tags should have your website URL.
-  So we give our website URL here and the template will know what URL to use 
+  So we give our website URL here and the template will know what URL to use
   for meta tags during build.
   If you don't know your website URL yet, don't worry about this
   and leave it empty or use localhost URL. It won't break anything.
 */
-
 const SERVER_PORT = 3000;
 // the url to access your blog during local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
@@ -27,13 +27,19 @@ if (isBuild) {
   BASE_URL = LIVE_URL;
 }
 
+// https://astro.build/config
 export default defineConfig({
-  server: { port: SERVER_PORT },
+  server: {
+    port: SERVER_PORT
+  },
   site: BASE_URL,
   integrations: [
     sitemap(),
     tailwind({
-      config: { applyBaseStyles: false },
+      config: {
+        applyBaseStyles: false
+      }
     }),
-  ],
+    markdoc({}),
+  ]
 });

@@ -1,9 +1,16 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "display": "theme/bubblegum",
   "compilerOptions": {
+    "strict": true,
+    "strictNullChecks": true,
     "types": [
       "astro/client"
+    ],
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin",
+      }
     ],
     "baseUrl": ".",
     "paths": {
