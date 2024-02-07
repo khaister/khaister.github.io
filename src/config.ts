@@ -9,3 +9,4 @@ export const MY_NAME = "Khai";
 // setup in astro.config.mjs
 const BASE_URL = new URL(import.meta.env.SITE);
 export const SITE_URL = BASE_URL.origin;
+export const IS_DEVELOPMENT = SITE_URL === "http://localhost:3000"
