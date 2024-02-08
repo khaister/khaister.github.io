@@ -1,7 +1,8 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
-import markdoc from "@astrojs/markdoc";
+import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import expressiveCode from "astro-expressive-code";
 import { defineConfig } from "astro/config";
 
 /*
@@ -30,16 +31,17 @@ if (isBuild) {
 // https://astro.build/config
 export default defineConfig({
   server: {
-    port: SERVER_PORT
+    port: SERVER_PORT,
   },
   site: BASE_URL,
   integrations: [
     sitemap(),
     tailwind({
       config: {
-        applyBaseStyles: false
-      }
+        applyBaseStyles: false,
+      },
     }),
-    markdoc({}),
-  ]
+    expressiveCode(),
+    mdx(),
+  ],
 });

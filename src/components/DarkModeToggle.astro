@@ -1,5 +1,7 @@
 ---
+
 ---
+
 <mode-toggle class="flex">
   <button
     class="justify-self-end bg-black dark:bg-white ml-4 inline-flex h-6 w-11 items-center rounded-full"
@@ -28,6 +30,7 @@
     if (mode === "dark") {
       document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
+      document.documentElement.setAttribute("data-theme", "github-dark");
       if (themeColorMetaTag) {
         // @ts-ignore
         themeColorMetaTag.content = "#262626";
@@ -35,12 +38,14 @@
     } else {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
+      document.documentElement.setAttribute("data-theme", "github-light");
       if (themeColorMetaTag) {
         // @ts-ignore
         themeColorMetaTag.content = "#ffffff";
       }
     }
   }
+
   function updateStorageTheme(mode: "light" | "dark") {
     if (mode === "dark") {
       sessionStorage.setItem("theme", "dark");
@@ -48,6 +53,7 @@
       sessionStorage.setItem("theme", "light");
     }
   }
+
   class ModeToggle extends HTMLElement {
     constructor() {
       super();
@@ -68,21 +74,25 @@
         // remove visibility class after setting initial dark/light class
         iconElem.classList.remove("invisible");
 
-        // Each time the button is clicked, update the count.
+        // each time the button is clicked, update html class and session storage
         toggle?.addEventListener("click", () => {
           if (currentMode === "dark") {
             const modeToSwitch = "light";
             iconElem.classList.remove("dark");
             iconElem.classList.add("light");
+
             updateHTMLTheme(modeToSwitch);
             updateStorageTheme(modeToSwitch);
+
             currentMode = modeToSwitch;
           } else {
             const modeToSwitch = "dark";
             iconElem.classList.remove("light");
             iconElem.classList.add("dark");
+
             updateHTMLTheme(modeToSwitch);
             updateStorageTheme(modeToSwitch);
+
             currentMode = modeToSwitch;
           }
 
