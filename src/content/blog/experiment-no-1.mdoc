@@ -6,10 +6,29 @@ date: 2024-02-07
 
 Markdown is powered by [Markdoc](https://markdoc.dev/). This is an example post to demonstrate all the basic markdown syntax. You can author content using the familiar markdown syntax you already know.
 
+{% aside type="tip" %}
+a fancy aside
+{% /aside %}
+
 ## Code Blocks
 
-```html {8}
+```html {% mark="{'A': 8}" %}
 <!-- src/content/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
+</html>
+```
+
+<br />
+
+```html {% mark="{'B': 3-6}" %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,6 +58,17 @@ Full RGB colors:
 [38;2;34;139;34mForestGreen - RGB(34, 139, 34)[0m
 
 Text formatting: [1mBold[0m [2mDimmed[0m [3mItalic[0m [4mUnderline[0m
+```
+
+<br />
+
+```diff {% meta="lang='js'" %}
+  function thisIsJavaScript() {
+    // This entire block gets highlighted as JavaScript,
+    // and we can still add diff markers to it!
+-   console.log('Old code to be removed')
++   console.log('New and shiny code!')
+  }
 ```
 
 ## Inline formatting

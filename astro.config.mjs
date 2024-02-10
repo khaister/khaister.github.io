@@ -1,5 +1,5 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
-import mdx from "@astrojs/mdx";
+import markdoc from "@astrojs/markdoc";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import expressiveCode from "astro-expressive-code";
@@ -42,6 +42,6 @@ export default defineConfig({
       },
     }),
     expressiveCode(),
-    mdx(),
+    markdoc(),
   ],
 });
