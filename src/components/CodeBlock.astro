@@ -1,7 +1,14 @@
 ---
-import { Code } from "astro-expressive-code/components";
+import { Code } from 'astro-expressive-code/components';
 
 const { content, language, mark, ins, del, meta } = Astro.props;
 ---
 
-<Code code={content} lang={language} mark={mark} ins={ins} del={del} meta={meta}/>
+<Code
+  code={content}
+  lang={language}
+  mark={mark}
+  ins={ins}
+  del={del}
+  meta={meta}
+/>

@@ -1,15 +1,15 @@
 ---
-import BlogPostMeta from "@/src/components/BlogPostMeta.astro";
-import ContentLayout from "@/src/layouts/ContentLayout.astro";
-import { getCollection } from "astro:content";
+import BlogPostMeta from '@/src/components/BlogPostMeta.astro';
+import ContentLayout from '@/src/layouts/ContentLayout.astro';
+import { getCollection } from 'astro:content';
 
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 interface Props {
-  entry: CollectionEntry<"blog">;
+  entry: CollectionEntry<'blog'>;
 }
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection('blog');
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -25,7 +25,7 @@ const { Content } = await entry.render();
     title={entry.data.title}
     description={entry.data.external ? undefined : entry.data.description}
     publishDate={entry.data.date.toISOString()}
-    slot="meta"
+    slot='meta'
   />
-  <Content slot="content" />
+  <Content slot='content' />
 </ContentLayout>

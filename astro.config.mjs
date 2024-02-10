@@ -1,9 +1,9 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
-import markdoc from "@astrojs/markdoc";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import expressiveCode from "astro-expressive-code";
-import { defineConfig } from "astro/config";
+import markdoc from '@astrojs/markdoc';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import expressiveCode from 'astro-expressive-code';
+import { defineConfig } from 'astro/config';
 
 /*
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
@@ -18,10 +18,10 @@ const SERVER_PORT = 3000;
 // the url to access your blog during local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 // the url to access your blog after deploying it somewhere (Eg. Netlify)
-const LIVE_URL = "https://khaister.github.io";
+const LIVE_URL = 'https://khaister.github.io';
 // this is the astro command your npm script runs
-const SCRIPT = process.env.npm_lifecycle_script || "";
-const isBuild = SCRIPT.includes("astro build");
+const SCRIPT = process.env.npm_lifecycle_script || '';
+const isBuild = SCRIPT.includes('astro build');
 let BASE_URL = LOCALHOST_URL;
 // When you're building your site in local or in CI, you could just set your URL manually
 if (isBuild) {

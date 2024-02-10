@@ -1,17 +1,17 @@
 ---
-import { getCollection } from "astro:content";
-import PageLayout from "../layouts/PageLayout.astro";
-import PageMeta from "../components/PageMeta.astro";
-import { SITE_TITLE, IS_DEVELOPMENT } from "../config";
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import PageMeta from '../components/PageMeta.astro';
+import { SITE_TITLE, IS_DEVELOPMENT } from '../config';
 
-const entries = await getCollection("blog", ({ data }) =>
+const entries = await getCollection('blog', ({ data }) =>
   IS_DEVELOPMENT ? true : !data.draft
 );
 ---
 
 <PageLayout>
-  <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
-  <section slot="main">
+  <PageMeta title={`Blog | ${SITE_TITLE}`} slot='meta' />
+  <section slot='main'>
     <ul>
       {
         entries
@@ -21,26 +21,26 @@ const entries = await getCollection("blog", ({ data }) =>
           )
           .map((entry: any) => {
             return (
-              <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
+              <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
                 <div>
                   <a
                     href={`/blog/${entry.slug}`}
-                    class="unset
+                    class='unset
                         transition-[background-size] duration-300
                         bg-gradient-to-r bg-left-bottom bg-no-repeat
                         bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
                         from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-                      "
+                      '
                   >
                     {entry.data.title}
                   </a>
                 </div>
-                <div class="text-text-muted text-sm italic pt-1">
+                <div class='text-text-muted text-sm italic pt-1'>
                   <time datetime={entry.data.date.toISOString()}>
-                    {new Date(entry.data.date).toLocaleDateString("en-us", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
+                    {new Date(entry.data.date).toLocaleDateString('en-us', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
                     })}
                   </time>
                 </div>

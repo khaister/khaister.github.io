@@ -7,23 +7,23 @@
 <script is:inline>
   // figure out user's preferred theme and set it as html class for tailwind before paint
   (function () {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const isSystemColorSchemeDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
+        '(prefers-color-scheme: dark)'
       ).matches;
-      const storageTheme = sessionStorage.getItem("theme");
+      const storageTheme = sessionStorage.getItem('theme');
       if (!storageTheme && isSystemColorSchemeDark) {
-        document.documentElement.classList.add("dark");
-        document.documentElement.setAttribute("data-theme", "github-dark");
-        document.head.children.namedItem("theme-color").content = "#0f172a";
-      } else if (storageTheme === "dark") {
-        document.documentElement.classList.add("dark");
-        document.documentElement.setAttribute("data-theme", "github-dark");
-        document.head.children.namedItem("theme-color").content = "#0f172a";
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'github-dark');
+        document.head.children.namedItem('theme-color').content = '#0f172a';
+      } else if (storageTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'github-dark');
+        document.head.children.namedItem('theme-color').content = '#0f172a';
       } else {
         // we already served rendered light theme
-        document.documentElement.setAttribute("data-theme", "github-light");
-        document.head.children.namedItem("theme-color").content = "#ffffff";
+        document.documentElement.setAttribute('data-theme', 'github-light');
+        document.head.children.namedItem('theme-color').content = '#ffffff';
       }
     }
   })();
