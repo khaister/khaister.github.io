@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
+/*
     Tailwind colors listed here: https://tailwindcss.com/docs/customizing-colors
-    
+
     Why colors are written in rgb format (255 255 255) instead of hex (#ffffff)
-    https://tailwindcss.com/docs/customizing-colors#using-css-variables 
+    https://tailwindcss.com/docs/customizing-colors#using-css-variables
 */
 @layer base {
 
@@ -113,9 +113,9 @@
         color: theme('colors.text.selection');
     }
 
-    /* 
-        if you want an anchor tag to not have this style, 
-        just add a class `unset` to it. 
+    /*
+        if you want an anchor tag to not have this style,
+        just add a class `unset` to it.
     */
     a:not(.unset) {
         text-decoration: none;
@@ -135,8 +135,9 @@
         color: theme('colors.text.code');
         padding: 0.125rem 0.25rem;
         border-radius: 0.25rem;
+        font-family: theme('fontFamily.code');
         font-size: 0.875em;
-        font-weight: 600;
+        font-weight: 400;
         border: 1px solid theme('colors.border.code');
         margin-bottom: 1.25em;
     }
