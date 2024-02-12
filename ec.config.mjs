@@ -1,6 +1,15 @@
-import { defineEcConfig } from "astro-expressive-code";
+import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-sections';
+import { defineEcConfig } from 'astro-expressive-code';
 
 export default defineEcConfig({
-  themes: ["github-dark", "github-light"],
+  themes: ['github-dark', 'github-light'],
   useThemedSelectionColors: true,
+  styleOverrides: {
+    codeFontFamily: 'Iosevka Regular, monospace',
+    frames: {
+      shadowColor: null,
+      editorActiveTabIndicatorTopColor: null,
+    },
+  },
+  plugins: [pluginCollapsibleSections()],
 });
