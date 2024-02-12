@@ -5,7 +5,7 @@ export default defineEcConfig({
   themes: ['github-dark', 'github-light'],
   useThemedSelectionColors: true,
   styleOverrides: {
-    codeFontFamily: 'Iosevka Regular, monospace',
+    codeFontFamily: 'Iosevka, monospace',
     frames: {
       shadowColor: null,
       editorActiveTabIndicatorTopColor: null,

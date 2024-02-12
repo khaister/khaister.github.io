@@ -7,7 +7,7 @@ module.exports = {
       fontFamily: {
         body: ['Overpass', 'sans-serif'],
         heading: ['Overpass', 'sans-serif'],
-        code: ['Iosevka Regular', 'monospace'],
+        code: ['Iosevka', 'monospace'],
       },
       colors: {
         transparent: 'transparent',
