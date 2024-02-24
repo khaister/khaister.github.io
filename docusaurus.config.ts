@@ -48,7 +48,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     headTags: [
       {
         tagName: 'link',
@@ -64,10 +64,10 @@ const config: Config = {
     },
     navbar: {
       title: 'Khai',
-      logo: {
-        alt: 'Khai Logo',
-        src: 'img/logo.svg',
-      },
+      // logo: {
+      //   alt: 'Khai Logo',
+      //   src: 'img/logo.svg',
+      // },
       items: [
         {
           type: 'docSidebar',
