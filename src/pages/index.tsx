@@ -27,6 +27,7 @@ export default function Home(): JSX.Element {
       description="">
       <HomepageHeader />
       <main>
+        <div>a test</div>
       </main>
     </Layout>
   );
