@@ -27,17 +27,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -47,7 +39,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    // TODO: Replace with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
     headTags: [
       {
@@ -64,19 +56,21 @@ const config: Config = {
     },
     navbar: {
       title: 'Khai',
+      // TODO: Replace with your project's logo
       // logo: {
       //   alt: 'Khai Logo',
       //   src: 'img/logo.svg',
       // },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'wikiSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        { to: '/about', label: 'About', position: 'left' },
+        // TODO: Add docs, blog, and about links
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'wikiSidebar',
+        //   position: 'left',
+        //   label: 'Docs',
+        // },
+        // { to: '/blog', label: 'Blog', position: 'left' },
+        // { to: '/about', label: 'About', position: 'left' },
         {
           href: 'https://github.com/khaister',
           label: 'GitHub',
