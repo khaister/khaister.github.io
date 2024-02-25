@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build:
-    if: ${{ github.event.label.name == 'deploy' }}
+    if: ${{ github.ref_name == 'main' || github.event.label.name == 'deploy' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
