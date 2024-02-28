@@ -6,6 +6,7 @@ const config: Config = {
   title: 'Khai',
   tagline: '',
   favicon: '/favicon.ico',
+  staticDirectories: ['public', 'static'],
 
   url: 'https://khaister.github.io',
   baseUrl: '/',
@@ -41,15 +42,6 @@ const config: Config = {
   themeConfig: {
     // TODO: Replace with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
-    headTags: [
-      {
-        tagName: 'link',
-        attributes: {
-          href: 'https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css',
-          rel: 'stylesheet',
-        },
-      },
-    ],
     colorMode: {
       defaultMode: 'light',
       respectPrefersColorScheme: true,

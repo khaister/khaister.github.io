@@ -4,6 +4,8 @@
  * work well for content-centric websites.
  */
 
+ @import url('/font-awesome/css/all.min.css');
+
 .header-github-link::before {
   content: '';
   width: 24px;
