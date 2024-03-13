@@ -6,6 +6,12 @@
 
  @import url('/font-awesome/css/all.min.css');
 
+body {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .header-github-link::before {
   content: '';
   width: 24px;
