@@ -26,6 +26,13 @@ const config: Config = {
     {
       tagName: 'link',
       attributes: {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css',
+      }
+    },
+    {
+      tagName: 'link',
+      attributes: {
         rel: 'preconnect',
         href: 'https://fonts.googleapis.com',
       }
