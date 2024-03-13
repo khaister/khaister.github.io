@@ -4,6 +4,12 @@
  * work well for content-centric websites.
  */
 
+body {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .header-github-link::before {
   content: '';
   width: 24px;
