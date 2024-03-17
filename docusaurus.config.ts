@@ -96,6 +96,12 @@ const config: Config = {
         // { to: '/blog', label: 'Blog', position: 'left' },
         // { to: '/about', label: 'About', position: 'left' },
         {
+          to: 'https://linkedin.com/in/khainguyen',
+          position: 'right',
+          label: ' ',
+          className: 'header-linkedin-link group',
+        },
+        {
           to: 'https://github.com/khaister',
           position: 'right',
           label: ' ',
