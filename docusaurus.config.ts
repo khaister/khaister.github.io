@@ -94,7 +94,7 @@ const config: Config = {
         //   label: 'Docs',
         // },
         // { to: '/blog', label: 'Blog', position: 'left' },
-        // { to: '/about', label: 'About', position: 'left' },
+        { to: '/about', label: 'About', position: 'left' },
         {
           to: 'https://linkedin.com/in/khainguyen',
           position: 'right',
