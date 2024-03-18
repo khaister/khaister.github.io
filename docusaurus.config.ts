@@ -7,13 +7,10 @@ const config: Config = {
   tagline: '',
   favicon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋🏼</text></svg>',
   staticDirectories: ['public', 'static'],
-
+  projectName: 'khaister.github.io',
+  organizationName: 'khaister',
   url: 'https://khaister.github.io',
   baseUrl: '/',
-
-  organizationName: 'khaister',
-  projectName: 'khaister.github.io',
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -65,7 +62,7 @@ const config: Config = {
           showReadingTime: true,
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/global.css',
         },
       } satisfies Preset.Options,
     ],
@@ -86,25 +83,24 @@ const config: Config = {
       //   src: 'img/logo.svg',
       // },
       items: [
-        // TODO: Add docs, blog, and about links
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'wikiSidebar',
-        //   position: 'left',
-        //   label: 'Docs',
-        // },
-        // { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          type: 'docSidebar',
+          sidebarId: 'docSidebar',
+          position: 'left',
+          label: 'Docs',
+        },
+        { to: '/blog', label: 'Blog', position: 'left' },
         { to: '/about', label: 'About', position: 'left' },
         {
-          to: 'https://linkedin.com/in/khainguyen',
+          href: 'https://linkedin.com/in/khainguyen',
           position: 'right',
-          label: ' ',
+          label: 'LinkedIn',
           className: 'header-linkedin-link group',
         },
         {
-          to: 'https://github.com/khaister',
+          href: 'https://github.com/khaister',
           position: 'right',
-          label: ' ',
+          label: 'GitHub',
           className: 'header-github-link group',
         },
       ],
